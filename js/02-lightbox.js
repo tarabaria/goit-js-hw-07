@@ -14,16 +14,8 @@ const galleryItemsHTML = galleryItems
 
 gallery.insertAdjacentHTML('beforeend', galleryItemsHTML);
 
-// Ініціалізація SimpleLightbox
+// SimpleLightbox
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
-});
-
-lightbox.on('show.simplelightbox', function () {
-  lightbox.items.captionEl.style.display = 'block';
-});
-
-lightbox.on('close.simplelightbox', function () {
-  lightbox.items.captionEl.style.display = 'none';
 });
